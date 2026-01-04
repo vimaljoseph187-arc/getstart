@@ -3,64 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vimal J | Software Developer & Freelancer</title>
+    <title>Vimal J | Full-Stack Software Developer</title>
+
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
+        html {
+            scroll-behavior: smooth;
         }
 
-        /* HEADER */
-        header {
-            background: #0f172a;
-            color: #fff;
-            padding: 60px 20px;
-            text-align: center;
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: #1e293b;
+            background-color: #f8fafc;
         }
+
+        /* NAVBAR */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #020617;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .brand {
+            color: #38bdf8;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: #e5e7eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* HERO */
+        header {
+            background: linear-gradient(135deg, #020617, #0f172a);
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
         .logo {
-            width: 80px;
-            height: 80px;
+            width: 90px;
+            height: 90px;
             background: #38bdf8;
             color: #020617;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
+            font-size: 36px;
             font-weight: bold;
-            margin: 0 auto 15px;
+            margin: 0 auto 20px;
         }
+
         header h1 {
+            font-size: 42px;
             margin-bottom: 10px;
-            font-size: 40px;
         }
+
         header p {
             font-size: 18px;
             color: #cbd5e1;
         }
 
-        section {
-            padding: 60px 20px;
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        h2 {
-            color: #0f172a;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #e2e8f0;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-
-        /* BUTTON */
         .btn {
             display: inline-block;
-            margin-top: 20px;
-            padding: 14px 30px;
+            margin-top: 30px;
+            padding: 14px 32px;
             background: #38bdf8;
             color: #020617;
             text-decoration: none;
@@ -68,72 +96,149 @@
             border-radius: 30px;
             transition: 0.3s;
         }
+
         .btn:hover {
             background: #0ea5e9;
         }
 
-        /* GET STARTED SECTION */
-        .get-started {
-            background: linear-gradient(135deg, #0f172a, #020617);
+        /* SECTIONS */
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #020617;
+            border-left: 5px solid #38bdf8;
+            padding-left: 15px;
+        }
+
+        /* ABOUT */
+        .about p {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 900px;
+        }
+
+        /* PROJECTS */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            color: #0f172a;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: linear-gradient(135deg, #020617, #0f172a);
             color: #fff;
             text-align: center;
-            padding: 70px 20px;
         }
-        .get-started h2 {
-            color: #fff;
-            border: none;
-        }
-        .get-started p {
-            max-width: 700px;
-            margin: auto;
+
+        .contact p {
             font-size: 18px;
             color: #cbd5e1;
+        }
+
+        .contact a {
+            color: #38bdf8;
+            font-weight: bold;
+            text-decoration: none;
         }
 
         footer {
             text-align: center;
             padding: 15px;
-            font-size: 14px;
             background: #020617;
             color: #94a3b8;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <!-- LOGO -->
+<!-- NAVIGATION -->
+<nav>
+    <div class="brand">GetStart</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<header id="home">
     <div class="logo">VJ</div>
-
     <h1>Vimal J</h1>
-    <p>Software Developer | Full-Stack & Mobile App Freelancer</p>
-
-    <!-- GET STARTED BUTTON -->
-    <a href="#get-started" class="btn">Get Started</a>
+    <p>Full-Stack Software Developer | Python • Flask • Flutter</p>
+    <a href="#contact" class="btn">Get Started</a>
 </header>
 
-<section>
+<!-- ABOUT -->
+<section id="about" class="about">
     <h2>About Me</h2>
     <p>
-        I am a Software Developer with 3+ years of experience building scalable web and mobile applications.
-        I specialize in Python, Flask, REST APIs, and Flutter, delivering high-quality software solutions
-        for startups and businesses.
+        I am a Full-Stack Software Developer with 3+ years of experience building scalable web and mobile
+        applications. I specialize in Python, Flask, REST APIs, databases, and Flutter-based cross-platform
+        apps. I help startups and businesses transform ideas into secure, high-performance software solutions.
     </p>
 </section>
 
-<!-- GET STARTED WORK SECTION -->
-<section id="get-started" class="get-started">
-    <h2>Let’s Get Started</h2>
-    <p>
-        Looking for a reliable freelancer to build your website, backend system, or mobile application?
-        I help businesses turn ideas into high-quality software solutions.
-    </p>
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="project-card">
+            <h3>Doctor Conference Management System</h3>
+            <p>
+                Full-stack web platform with secure presentation uploads, certificate generation,
+                admin dashboard, and AWS S3 integration.
+            </p>
+        </div>
 
-    <a href="mailto:vimaljoseph187@gmail.com" class="btn">Start Your Project</a>
+        <div class="project-card">
+            <h3>QR Code Attendance System</h3>
+            <p>
+                Cross-platform mobile and desktop system for real-time attendance tracking and
+                credit point calculation.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3>Image & Video Poll Platform</h3>
+            <p>
+                Media-based polling system with real-time analytics, scoring, and automated reporting.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Let’s build something great together.</p>
+    <p>Email: <a href="mailto:vimaljoseph187@gmail.com">vimaljoseph187@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/vimal-j-90898b239/" target="_blank">View Profile</a></p>
 </section>
 
 <footer>
-    © 2026 Vimal J | Freelance Software Developer
+    © 2026 Vimal J | Full-Stack Software Developer
 </footer>
 
 </body>
